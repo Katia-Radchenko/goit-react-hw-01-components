@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Descriptions from "./descriptions/descriptions";
+import Descriptions from "./description/Description";
 import Stats from "./stats/Stats";
 import { ProfileCard } from "./Profile.styled";
 

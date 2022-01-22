@@ -1,28 +1,22 @@
 import PropTypes from "prop-types";
-import {
-  DiscriptionWrap,
-  Image,
-  Name,
-  Tag,
-  Location,
-} from "./Discription.styled";
+import { DescriptionWrap, Image, Name, Tag, Location } from "./Descriptions";
 
-const Discription = ({ avatar, userName, tag, location }) => {
+const Description = ({ avatar, userName, tag, location }) => {
   return (
-    <DiscriptionWrap>
+    <DescriptionWrap>
       <Image src={avatar} alt={userName} />
       <Name>{userName}</Name>
       <Tag>@{tag}</Tag>
       <Location>{location}</Location>
-    </DiscriptionWrap>
+    </DescriptionWrap>
   );
 };
 
-Discription.propTypes = {
+Description.propTypes = {
   avatar: PropTypes.string.isRequired,
   userName: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
 };
 
-export default Discription;
+export default Description;

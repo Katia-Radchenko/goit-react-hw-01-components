@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ItemTemplate from "./itemTemplate/ItemTemplate";
+import ItemTemplate from "./itemTemplate/itemTemplate";
 import { FriendsWrap } from "./FriendsList.styled";
 
 export default function FriendsList({ friends }) {
