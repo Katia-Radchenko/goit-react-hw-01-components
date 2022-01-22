@@ -21,6 +21,7 @@
     "prepare": "husky install",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,6 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,css,md,scss}": "prettier --write"
+    "*.{js,css,md,scss,jsx}": "prettier --write"
   }
 }
