@@ -1,19 +1,30 @@
 import PropTypes from 'prop-types';
 import StatsListItem from './StatsListItem/StatsListItem';
-import {StatsList} from './StatList.styled';
-import Statistics from '../Statistics';
+import { StatsList, Header } from './StatList.styled';
 
-export default function StatList({ stats = [] }) {
-  const listElements = stats.map(stat => <StatsListItem key={stat.id} label={stat.label}
-                                                        percentage={stat.percentage} />);
+export default function StatList({ title, stats = [] }) {
+  const listElements = stats.map(stat => (
+    <StatsListItem
+      key={stat.id}
+      label={stat.label}
+      percentage={stat.percentage}
+    />
+  ));
 
   return (
-    <StatsList className='stat-list'>
-      {listElements}
-    </StatsList>
+    <>
+      {title && <Header>{title}</Header>}
+      <StatsList>{listElements}</StatsList>
+    </>
   );
 }
-Statistics.propTypes = {
-  stats: PropTypes.array,
-};
 
+StatList.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};

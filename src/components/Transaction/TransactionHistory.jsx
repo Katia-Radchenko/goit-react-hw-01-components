@@ -3,10 +3,8 @@ import TransactionThead from './TransactionThead/TransactionThead';
 import TransactionBody from './TransactionBody/TransactionBody';
 import { Table } from './TransactionHistory.styled';
 
-
 export default function TransactionHistory({ items }) {
   return (
-
     <Table>
       <TransactionThead />
       <TransactionBody items={items} />
@@ -15,5 +13,12 @@ export default function TransactionHistory({ items }) {
 }
 
 TransactionHistory.propTypes = {
-  stats: PropTypes.array,
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };

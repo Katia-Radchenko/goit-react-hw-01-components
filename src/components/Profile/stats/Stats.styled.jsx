@@ -7,13 +7,14 @@ export const StatsList = styled.ul`
   background-color: #eeeeee;
   border: 1px solid #999999;
   padding-left: 0;
-  `
+`;
 export const StatsItem = styled.li`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 20px 20px;
   flex-basis: calc(100% / 3);
+
   &:not(:last-child) {
     border-right: 1px solid #999999;
   }

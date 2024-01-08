@@ -5,11 +5,11 @@ export default function Stats({ followers, views, likes }) {
   return (
     <StatsList>
       <StatsItem>
-        <StatLabel >Followers</StatLabel>
-        <StatQuantity >{followers}</StatQuantity>
+        <StatLabel>Followers</StatLabel>
+        <StatQuantity>{followers}</StatQuantity>
       </StatsItem>
       <StatsItem>
-        <StatLabel >Views</StatLabel>
+        <StatLabel>Views</StatLabel>
         <StatQuantity>{views}</StatQuantity>
       </StatsItem>
       <StatsItem>
@@ -25,4 +25,3 @@ Stats.propTypes = {
   views: PropTypes.number.isRequired,
   likes: PropTypes.number.isRequired,
 };
-

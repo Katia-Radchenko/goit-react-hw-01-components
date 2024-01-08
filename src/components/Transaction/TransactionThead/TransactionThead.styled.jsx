@@ -5,13 +5,11 @@ export const Thead = styled.thead`
 `;
 
 export const Items = styled.th`
-  //width: calc(100% / 3);
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: 400;
   font-size: 20px;
   text-align: center;
-  //color: #fff;
 `;
 
 
